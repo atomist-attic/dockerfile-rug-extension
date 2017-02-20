@@ -7,7 +7,7 @@ import com.atomist.rug.spi.{ReflectivelyTypedType, Type}
 import com.atomist.tree.TreeNode
 
 object DockerfileType {
-  val languageExtensionExt = "Dockerfile"
+  val dockerfileName = "Dockerfile"
 }
 
 class DockerfileType(evaluator: Evaluator)
@@ -26,10 +26,10 @@ class DockerfileType(evaluator: Evaluator)
   override def findAllIn(context: TreeNode): Option[Seq[TreeNode]] = context match {
       case pmv: ProjectMutableView =>
         Some(pmv.currentBackingObject.allFiles
-          .filter(f => f.name.endsWith(languageExtensionExt))
+          .filter(f => f.name == dockerfileName)
           .map(f => new DockerfileMutableView(f, pmv, new Dockerfile))
         )
-      case fmv: FileMutableView if fmv.name.endsWith(languageExtensionExt) =>
+      case fmv: FileMutableView if fmv.name == dockerfileName =>
         Some(Seq(new DockerfileMutableView(fmv.currentBackingObject, fmv.parent, new Dockerfile)))
       case _ => None
     }

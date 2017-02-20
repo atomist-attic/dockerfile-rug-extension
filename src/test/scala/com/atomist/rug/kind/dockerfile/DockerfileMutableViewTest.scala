@@ -32,10 +32,10 @@ object DockerfileMutableViewTest {
   import DockerfileType._
 
   private val fileContents =
-    """Contents of a sample file that you would
-      |like to test.
+    """FROM java:8
+      |RUN [ "/bin/bash" ]
       |""".stripMargin
-  val fileName: String = "file" + languageExtensionExt
+  val fileName: String = dockerfileName
   val fileArtifact = StringFileArtifact(fileName, fileContents)
   val artifactSource = SimpleFileBasedArtifactSource(fileArtifact)
   val pmv = new ProjectMutableView(artifactSource)
