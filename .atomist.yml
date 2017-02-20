@@ -1,0 +1,20 @@
+---
+kind: "operation"
+client: "rug-cli 0.24.0"
+generator:
+  name: "NewRugLanguageExtensionProject"
+  group: "atomist-rugs"
+  artifact: "rug-language-extension"
+  version: "0.1.0"
+  origin:
+    repo: "git@github.com:atomist-rugs/rug-language-extension.git"
+    branch: "master"
+    sha: "f51b100*"
+  parameters:
+    - "extension_name": "Dockerfile"
+    - "description": "Rug language extension for Dockerfiles."
+    - "extension_file_ext": "Dockerfile"
+    - "owner": "atomist-rugs"
+    - "root_package": "com.atomist"
+    - "project_name": "dockerfile-rug-extension"
+

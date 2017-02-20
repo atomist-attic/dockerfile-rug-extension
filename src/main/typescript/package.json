@@ -1,0 +1,27 @@
+{
+  "name": "@atomist-rugs/dockerfile",
+  "version": "${project.version}",
+  "description": "TypeScript model for Dockerfile Rug language extension",
+  "keywords": [
+    "Atomist",
+    "Rug",
+    "Dockerfile"
+  ],
+  "author": "Atomist, Inc",
+  "license": "Apache-2.0",
+  "atomist" : {
+    "group": "com.atomist",
+    "artifact": "dockerfile-rug-extension"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atomist-rugs/dockerfile-rug-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atomist-rugs/dockerfile-rug-extension/issues"
+  },
+  "homepage": "https://github.com/atomist-rugs/dockerfile-rug-extension#readme",
+  "dependencies": {
+    "@atomist/rug": "${rug.version}"
+  }
+}
