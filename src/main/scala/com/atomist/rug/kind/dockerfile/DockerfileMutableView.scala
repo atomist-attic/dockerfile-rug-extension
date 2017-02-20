@@ -11,10 +11,10 @@ object DockerfileMutableView {
 }
 
 class DockerfileMutableView(
-                                    originalBackingObject: FileArtifact,
-                                    parent: ProjectMutableView,
-                                    languageExtension: Dockerfile
-                                  )
+                             originalBackingObject: FileArtifact,
+                             parent: ProjectMutableView,
+                             dockerfile: Dockerfile
+                           )
   extends LazyFileArtifactBackedMutableView(originalBackingObject, parent) {
 
   import DockerfileMutableView._
